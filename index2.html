@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Slider-js</title>
+    <style>
+    .collapsible {
+      background-color: #777;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: background-color 200ms ease;
+    }
+
+    .collapsible:hover {
+      background-color: #555;
+    }
+
+    .collapsible__content {
+      padding: 0 18px;
+    }
+    .collapsible.collapsible--collapsed {
+      background:red;
+    }
+
+    .collapsible.collapsible--collapsed .collapsible__content {
+      display: none;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="collapsible collapsible--collapsed">
+      <button class="collapsible__button">Toggle</button>
+      <div class="collapsible__content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+    </div>
+
+    <div class="collapsible collapsible--collapsed">
+      <button class="collapsible__button">Toggle</button>
+      <div class="collapsible__content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+    </div>
+
+    <div class="collapsible collapsible--collapsed">
+      <button class="collapsible__button">Toggle</button>
+      <div class="collapsible__content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // document.querySelector('.collapsible__button').addEventListener('click', function() {
+      //   document.querySelector('.collapsible').classList.toggle("collapsible--collapsed");
+      // });
+    </script>
+  </body>
+</html>

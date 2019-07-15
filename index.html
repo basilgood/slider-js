@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Slider-js</title>
+    <link rel="stylesheet" type="text/css" href="./style/style.css" />
+  </head>
+  <body>
+    <div class="slide-container">
+      <div class="slide-track">
+        <div class="slide">
+          <img src="https://via.placeholder.com/80x60" />
+        </div><!--
+     --><div class="slide">
+          <img src="https://via.placeholder.com/80x60" />
+        </div><!--
+     --><div class="slide">
+          <img src="https://via.placeholder.com/80x60" />
+        </div>
+      </div>
+      <a class="prev">&#10094;</a>
+      <span class="page"></span>
+      <a class="next">&#10095;</a>
+    </div>
+
+
+    <div class="slide-container">
+      <div class="slide-track">
+        <div class="slide">
+          <img src="https://via.placeholder.com/80x60" />
+        </div><!--
+     --><div class="slide">
+          <img src="https://via.placeholder.com/80x60" />
+        </div><!--
+     --><div class="slide">
+          <img src="https://via.placeholder.com/80x60" />
+        </div>
+      </div>
+      <a class="prev">&#10094;</a>
+      <span class="page"></span>
+      <a class="next">&#10095;</a>
+    </div>
+
+    <button class="reset">Reset</button>
+
+    <script>
+      class Slider {
+        constructor($root) {
+            this.i = 0
+            this.$track = $root.querySelector(".slide-track")
+            this.$page = $root.querySelector(".page")
+            this.$next = $root.querySelector(".next")
+            this.$prev = $root.querySelector(".prev")
+
+            this.$next.addEventListener("click", function() {
+              this.animate(+1)
+            }.bind(this));
+            this.$prev.addEventListener("click", function() {
+              this.animate(-1)
+            }.bind(this));
+        }
+
+        animate(dir) {
+          this.i = this.i + dir
+          if (this.i >= 3) {
+            this.i = 2;
+          }
+          if (this.i < 0) {
+            this.i = 0;
+          }
+          this.$track.style.transform = `translateX(${-this.i * 80}px)`;
+          this.$page.textContent = this.i;
+        }
+
+        reset() {
+          this.i = 0;
+          this.animate(0);
+        }
+      }
+
+      // 1. fa slider1 sa mearga
+      // 2. pune un <buton> in pagina, iar la click pe el sa faca `reset` pe ambele slidere
+      let slider1 = new Slider(document.querySelectorAll('.slide-container')[0])
+
+      let slider2 = new Slider(document.querySelectorAll('.slide-container')[1])
+
+      setTimeout(function() {
+        slider1.animate(+2)
+        slider2.animate(+1)
+      }, 1000);
+
+      document.querySelector('.reset').addEventListener('click', function() {
+        slider1.reset();
+        slider2.reset();
+
+      });
+
+
+
+
+    </script>
+  </body>
+</html>

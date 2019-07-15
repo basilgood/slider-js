@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 5%;
+  margin: 0 auto;
+}
+
+.slide-container {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 80px;
+}
+
+.slide-track {
+  width: calc(3*80px);
+  transition: transform 2s ease;
+}
+
+.slide {
+  display: inline-block;
+}
