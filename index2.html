@@ -75,6 +75,45 @@
       // document.querySelector('.collapsible__button').addEventListener('click', function() {
       //   document.querySelector('.collapsible').classList.toggle("collapsible--collapsed");
       // });
+      class Toggle {
+        constructor(el) {
+          this.el = el
+
+          const button = this.el.querySelector('.collapsible__button')
+
+          button.addEventListener('click', function() {
+            this.toggle()
+          }.bind(this));
+        }
+
+        toggle() {
+          this.el.classList.toggle('collapsible--collapsed')
+        }
+
+        open() {
+          this.el.classList.remove('collapsible--collapsed')
+        }
+
+        close() {
+          this.el.classList.add('collapsible--collapsed')
+        }
+      }
+
+      // document.addEventListener('mousemove', function() {
+      //   toggles[Math.round(Math.random() * 2)].toggle()
+      // })
+
+      const toggles = Array.from(document.querySelectorAll('.collapsible')).map(function(el) {
+        return new Toggle(el)
+      })
+      console.log(toggles)
+
+
+      toggles[1].open()
+      setTimeout(function() {
+        toggles[1].close()
+      }, 1000)
+
     </script>
   </body>
 </html>
