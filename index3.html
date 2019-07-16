@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Slider-js</title>
+    <link rel="stylesheet" type="text/css" href="./style/style.css" />
+    <style>
+      .colorfull {
+        background-color: yellow;
+        width: 50%;
+        margin: auto;
+        height: 400px;
+      }
+      .button__container {
+        text-align: center;
+      }
+      .button {
+        width: 70px;
+        height:30px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="colorfull"></div>
+      <div class="button__container">
+        <button class="button--red">Red</button>
+        <button class="button--blue">Blue</button>
+        <button class="button--random">Random</button>
+      </div>
+    </div>
+
+    <script>
+
+      // 1. scrie o functie numita fullName care primeste un obiect de tipul
+      // { firstName: "Vivi", lastName: "Ana" }
+      // si returneaza un string
+      // "Vivi Ana"
+
+
+      // 2. scrie o functie care primeste un string de tipul "Vivi Ana"
+      // si returneaza un obiect de tipul
+      // { firstName: "Vivi", lastName: "Ana" }
+
+      let obj = {
+        firstName: "Vivi",
+        lastName: "Ana"
+      }
+
+      let fullName = function(a) {
+        return a.firstName + " " + a.lastName;
+      }
+
+      console.log(fullName(obj));
+
+      let parseName = function(a) {
+        let x = a.split(' ');
+        return {firstName: x[0], lastName: x[1]};
+      }
+
+      console.log(parseName("Vivi Ana"))
+      console.log(parseName("Gigi Duru"))
+
+      /*
+      3. o functie care returneaza o culoare random in formatul "rgb(255,255,255)", folosind Math.random()
+      4. o functie care primeste un numar `n` si scrie in consola de `n` ori "Aoleu!"
+      5. o functie care primeste un text si returneaza acelasi text, dar in care cuvintele sunt scrise pe dos
+      ex: 'Am fost la mare' => 'mA tsof al eram'
+      6. o functie care primeste un text si un numar 'n' si repeta acel text de 'n' ori
+      7. o functie numita fizzBuzz, care nu primeste nimic si afiseaza toate numerele de la 0 la 100,
+      dar cand numarul se divide cu 3 afiseaza "Fizz" in loc de numar
+      si cand numarul se divide cu 5 afiseaza "Buzz" in loc de numar
+      iar cand numarul se divide si cu 3 si cu 5 afiseaza "FizzBuzz" in loc de numar
+      ex:
+      1
+      2
+      Fizz
+      4
+      Buzz
+      Fizz
+      7
+      8
+      Fizz
+      Buzz
+      11
+      Fizz
+      13
+      14
+      FizzBuzz
+      16
+      ...
+      */
+
+    </script>
+  </body>
+
+</html>
