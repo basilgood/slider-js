@@ -39,3 +39,18 @@ function extraAoleu(n) {
 }
 
 console.log(extraAoleu(4));
+
+let inputText = 'Am fost la mare';
+let invText = inputText.split(' ');
+let res = [];
+for (let i = 0; i < invText.length; i++) {
+  res.push(invText[i].split('').reverse().join(''));
+}
+console.log(res.join(' '));
+
+
+console.log(
+  inputText.split(' ')
+    .map(word => word.split('').reverse().join(''))
+    .join(' ')
+);
