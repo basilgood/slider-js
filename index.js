@@ -54,3 +54,7 @@ console.log(
     .map(word => word.split('').reverse().join(''))
     .join(' ')
 );
+
+let nText = (a, n) => a.repeat(n);
+
+console.log(nText('text', 7));
