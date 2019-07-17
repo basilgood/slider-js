@@ -29,3 +29,13 @@ function multiply(n) {
 }
 
 console.log(multiply(4));
+
+function extraAoleu(n) {
+  let arrAoleu = [];
+  for(let i = 0; i < n; i++) {
+    arrAoleu.push('Aoleu!');
+  }
+  return arrAoleu.join('');
+}
+
+console.log(extraAoleu(4));
